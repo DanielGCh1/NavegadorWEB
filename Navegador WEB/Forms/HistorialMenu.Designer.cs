@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialMenu));
             this.DataGridViewInformacion = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ButtonBorrarHistorial = new System.Windows.Forms.Button();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.URL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ButtonBorrarHistorial = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewInformacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,20 @@
             this.DataGridViewInformacion.Name = "DataGridViewInformacion";
             this.DataGridViewInformacion.Size = new System.Drawing.Size(763, 340);
             this.DataGridViewInformacion.TabIndex = 0;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 250;
+            // 
+            // URL
+            // 
+            this.URL.HeaderText = "URL";
+            this.URL.Name = "URL";
+            this.URL.ReadOnly = true;
+            this.URL.Width = 500;
             // 
             // label1
             // 
@@ -68,20 +83,6 @@
             this.ButtonBorrarHistorial.UseVisualStyleBackColor = true;
             this.ButtonBorrarHistorial.Click += new System.EventHandler(this.ButtonBorrarHistorial_Click);
             // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 250;
-            // 
-            // URL
-            // 
-            this.URL.HeaderText = "URL";
-            this.URL.Name = "URL";
-            this.URL.ReadOnly = true;
-            this.URL.Width = 500;
-            // 
             // HistorialMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +91,7 @@
             this.Controls.Add(this.ButtonBorrarHistorial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridViewInformacion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HistorialMenu";
             this.Text = "Historial";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewInformacion)).EndInit();
