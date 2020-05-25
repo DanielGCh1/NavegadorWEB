@@ -42,6 +42,7 @@
             this.ToolStripMenuItemHistorial = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemCache = new System.Windows.Forms.ToolStripMenuItem();
             this.WebBrowserPrincipal = new System.Windows.Forms.WebBrowser();
+            this.ProgressBarDescarga = new System.Windows.Forms.ProgressBar();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,7 +107,6 @@
             // 
             // ToolStripTextBoxURL
             // 
-            this.ToolStripTextBoxURL.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ToolStripTextBoxURL.Name = "ToolStripTextBoxURL";
             this.ToolStripTextBoxURL.Size = new System.Drawing.Size(400, 25);
             // 
@@ -155,14 +155,14 @@
             // ToolStripMenuItemHistorial
             // 
             this.ToolStripMenuItemHistorial.Name = "ToolStripMenuItemHistorial";
-            this.ToolStripMenuItemHistorial.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemHistorial.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItemHistorial.Text = "Historial";
             this.ToolStripMenuItemHistorial.Click += new System.EventHandler(this.ToolStripMenuItemHistorial_Click);
             // 
             // ToolStripMenuItemCache
             // 
             this.ToolStripMenuItemCache.Name = "ToolStripMenuItemCache";
-            this.ToolStripMenuItemCache.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemCache.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItemCache.Text = "¿Borrar Cache?";
             this.ToolStripMenuItemCache.Click += new System.EventHandler(this.ToolStripMenuItemCache_Click);
             // 
@@ -174,6 +174,13 @@
             this.WebBrowserPrincipal.Size = new System.Drawing.Size(833, 459);
             this.WebBrowserPrincipal.TabIndex = 2;
             // 
+            // ProgressBarDescarga
+            // 
+            this.ProgressBarDescarga.Location = new System.Drawing.Point(610, 9);
+            this.ProgressBarDescarga.Name = "ProgressBarDescarga";
+            this.ProgressBarDescarga.Size = new System.Drawing.Size(202, 10);
+            this.ProgressBarDescarga.TabIndex = 3;
+            // 
             // Ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +188,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(836, 487);
             this.ControlBox = false;
+            this.Controls.Add(this.ProgressBarDescarga);
             this.Controls.Add(this.WebBrowserPrincipal);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -211,5 +219,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemHistorial;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCache;
+        private System.Windows.Forms.ProgressBar ProgressBarDescarga;
     }
 }
