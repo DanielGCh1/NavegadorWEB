@@ -18,6 +18,10 @@ namespace NavegadorWEB.Forms
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+
+            Thread actualizarVentanaConstantemente = new Thread(EsperaQueSeTermineDeCargarLaVentana);
+            actualizarVentanaConstantemente.SetApartmentState(ApartmentState.STA);
+            actualizarVentanaConstantemente.Start();
         }
         public Thread HiloPestanna
         {
@@ -42,24 +46,7 @@ namespace NavegadorWEB.Forms
 
         private void ToolStripButtonBuscar_Click(object sender, EventArgs e)
         {
-            if (ToolStripTextBoxURL.TextLength > 0)
-            {
-                try
-                {
-                    WebBrowserPrincipal.Navigate(ToolStripTextBoxURL.Text);
-                    Mutex mutex = new Mutex();
-                    mutex.WaitOne();
-                    Thread.Sleep(50);
-                    Contenedor.Busqueda = ToolStripTextBoxURL.Text;
-                    Contenedor.BusquedaEcha = true;
-                    Thread.Sleep(50);
-                    mutex.ReleaseMutex();
-                }
-                catch (Exception ex)
-                {
-                    
-                }
-            }
+            HacerBuesqueda();
         }
 
         private void ToolStripButtonNuevaPestanna_Click(object sender, EventArgs e)
@@ -82,6 +69,7 @@ namespace NavegadorWEB.Forms
             mutex.WaitOne();
             Thread.Sleep(50);
             Contenedor.CerrarPestanna = true;
+            WebBrowserPrincipal.Dispose();
             HiloPestanna.Abort();
             Thread.Sleep(50);
             mutex.ReleaseMutex();
@@ -104,6 +92,34 @@ namespace NavegadorWEB.Forms
             {
 
             }
+        }
+        private void HacerBuesqueda()
+        {
+            if (ToolStripTextBoxURL.TextLength > 2)
+            {
+                try
+                {
+                    WebBrowserPrincipal.Navigate(ToolStripTextBoxURL.Text);
+                    Mutex mutex = new Mutex();
+                    mutex.WaitOne();
+                    Thread.Sleep(50);
+                    Contenedor.Busqueda = ToolStripTextBoxURL.Text;
+                    Contenedor.BusquedaEcha = true;
+                    Thread.Sleep(50);
+                    mutex.ReleaseMutex();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+        }
+        private void EsperaQueSeTermineDeCargarLaVentana()
+        {
+            Thread.Sleep(4000);
+            ToolStripTextBoxURL.Text = Contenedor.Busqueda;
+            HacerBuesqueda();
+            Thread.CurrentThread.Abort();
         }
     }
 }

@@ -45,5 +45,16 @@ namespace NavegadorWEB.Forms
                 DataGridViewInformacion.Rows.Add(Contenedor.ListaHistorial[i].Fecha, Contenedor.ListaHistorial[i].DirecionWEB);
             }
         }
+
+        private void DataGridViewInformacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Mutex mutex2 = new Mutex();
+            mutex2.WaitOne();
+            Thread.Sleep(50);
+            Contenedor.Busqueda = Convert.ToString(DataGridViewInformacion.Rows[e.RowIndex].Cells["URL"].Value);
+            Contenedor.AbrirPestanna = true;
+            Thread.Sleep(50);
+            mutex2.ReleaseMutex();
+        }
     }
 }

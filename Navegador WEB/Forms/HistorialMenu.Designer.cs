@@ -47,6 +47,7 @@
             this.DataGridViewInformacion.Name = "DataGridViewInformacion";
             this.DataGridViewInformacion.Size = new System.Drawing.Size(763, 340);
             this.DataGridViewInformacion.TabIndex = 0;
+            this.DataGridViewInformacion.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewInformacion_CellDoubleClick);
             // 
             // Fecha
             // 

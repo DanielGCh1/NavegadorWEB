@@ -18,7 +18,7 @@ namespace NavegadorWEB.Forms
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-            Busqueda = "Busqueda";// estas propiedades, son las compartidas por todos los hilos
+            Busqueda = "";// estas propiedades, son las compartidas por todos los hilos
             CerrarPestanna = false; // estas propiedades, son las compartidas por todos los hilos
             AbrirPestanna = false;// estas propiedades, son las compartidas por todos los hilos
             BusquedaEcha = false;// estas propiedades, son las compartidas por todos los hilos
@@ -80,7 +80,7 @@ namespace NavegadorWEB.Forms
             ventanaNueva.TopLevel = false;
             ventanaNueva.HiloPestanna = pestannasHilos.Last();
 
-            TabPage tabPage = new TabPage("Nueva Pestaña");
+            TabPage tabPage = new TabPage(Busqueda);
 
             if (InvokeRequired)
             {
@@ -118,6 +118,10 @@ namespace NavegadorWEB.Forms
                 if (CerrarPestanna)
                 {
                     ElinimarPestanna();
+                    if (tabControl1.Controls.Count == 0)
+                    {
+                        Application.Exit();
+                    }
                 }
                 if (BusquedaEcha)
                 {
@@ -177,7 +181,7 @@ namespace NavegadorWEB.Forms
             historial.Fecha = DateTime.Now;
             ListaHistorial.Add(historial);
             ListaHistorial.Count();
-            Busqueda = "Nuesva Pestaña";
+            Busqueda = "";
             Thread.Sleep(50);
             mutex.ReleaseMutex();
 

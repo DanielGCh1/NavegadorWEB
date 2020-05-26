@@ -20,3 +20,14 @@ C:\Users\dgcha\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\Navegador_W
 C:\Users\dgcha\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\NavegadorWEB.csproj.GenerateResource.cache
 C:\Users\dgcha\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\Navegador WEB.exe
 C:\Users\dgcha\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\Navegador WEB.pdb
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\bin\Debug\Navegador WEB.exe.config
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\bin\Debug\Navegador WEB.exe
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\bin\Debug\Navegador WEB.pdb
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\NavegadorWEB.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\NavegadorWEB.Forms.Contenedor.resources
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\NavegadorWEB.Forms.HistorialMenu.resources
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\NavegadorWEB.Forms.Ventana.resources
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\Navegador_WEB.Properties.Resources.resources
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\NavegadorWEB.csproj.GenerateResource.cache
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\Navegador WEB.exe
+C:\Users\Daniel\Documents\GitHub\NavegadorWEB\Navegador WEB\obj\Debug\Navegador WEB.pdb
